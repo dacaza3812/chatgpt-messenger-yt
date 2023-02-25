@@ -13,35 +13,35 @@ function HomePage() {
                 </div>
 
                 <div className="space-y-2">
-                    <p className="infoText">"Explain Something to me"</p>
-                    <p className="infoText">"What is the diference between a dog and a cat"</p>
-                    <p className="infoText">"What is the color of the sun"</p>
+                    <p className="infoText">"Explícame algo a mí"</p>
+                    <p className="infoText">"¿Cuál es la diferencia entre un perro y un gato?"</p>
+                    <p className="infoText">"¿De qué color es el sol?"</p>
                 </div>
             </div>
 
             <div>
                 <div className="flex flex-col items-center justify-center mb-5">
                     <BoltIcon className='h-8 w-8'/>
-                    <h2>Examples</h2>
+                    <h2>Capabilities</h2>
                 </div>
 
                 <div className="space-y-2">
-                    <p className="infoText">"Explain Something to me"</p>
-                    <p className="infoText">"What is the diference between a dog and a cat"</p>
-                    <p className="infoText">"What is the color of the sun"</p>
+                    <p className="infoText">"Cambia el modelo de ChatGPT para usar"</p>
+                    <p className="infoText">"Los mensajes se almacenan en Firestore de Firebase"</p>
+                    <p className="infoText">"Notificaciones de tostado caliente cuando ChatGPT está pensando"</p>
                 </div>
             </div>
 
             <div>
                 <div className="flex flex-col items-center justify-center mb-5">
                     <ExclamationTriangleIcon className='h-8 w-8'/>
-                    <h2>Examples</h2>
+                    <h2>Limitations</h2>
                 </div>
 
                 <div className="space-y-2">
-                    <p className="infoText">"Explain Something to me"</p>
-                    <p className="infoText">"What is the diference between a dog and a cat"</p>
-                    <p className="infoText">"What is the color of the sun"</p>
+                    <p className="infoText">"Puede generar información incorrecta ocasionalmente"</p>
+                    <p className="infoText">"Puede producir instrucciones dañinas o contenido sesgado ocasionalmente"</p>
+                    <p className="infoText">"Conocimiento limitado del mundo y los eventos posteriores a 2021"</p>
                 </div>
             </div>
         </div>
