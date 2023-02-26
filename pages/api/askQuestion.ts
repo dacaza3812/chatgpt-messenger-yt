@@ -1,6 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 import query from '../../lib/queryApi';
+import admin from "firebase-admin"
+import { adminDb } from '../../firebaseAdmin';
 
 type Data = {
   answer: string
@@ -28,8 +30,21 @@ export default async function handler(
 
     const message: Message = {
         text: response || "ChatGPT no ha podido encontrar una respuesta para eso",
-        
+        createdAt: admin.firestore.Timestamp.now(),
+        user: {
+          _id: 'ChatGPT',
+          name: 'ChatGPT',
+          avatar: 'https://1000logos.net/wp-content/uploads/2023/02/ChatGPT-Logo.png',
+        }
     }
 
-  res.status(200).json({ name: 'John Doe' })
+    await adminDb
+    .collection("users")
+    .doc(session?.user?.email)
+    .collection("chats")
+    .doc(chatId)
+    .collection("messages")
+    .add(message);
+
+  res.status(200).json({ answer: message.text })
 }
