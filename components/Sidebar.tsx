@@ -22,10 +22,11 @@ function Sidebar() {
         </div>
         {session && (
           <img
-          onClick={()=> signOut()}
-          src={session.user?.image!} alt="Profile Picture" 
-          className="h-12 w-12 rounded-full cursor-pointer mx-auto mb-2 hover:opacity-50"
-          />
+           onClick={()=> signOut()}
+           src={session.user?.image!}
+           alt="Profile pic"
+           className="h-12 w-12 rounded-full cursor-pointer mx-auto mb-2 hover:opacity-50"
+           />
         )}
     </div>
   )
